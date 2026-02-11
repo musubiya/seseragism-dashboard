@@ -1870,6 +1870,247 @@ def page_statistics() -> None:
 
 
 # ============================================================
+# Page 6: 行動原則
+# ============================================================
+def page_action_principles() -> None:
+    """セセラギズムの7つの行動原則を表示する。"""
+
+    render_hero(
+        "7つの行動原則",
+        "Action Principles of SESERAGISM",
+        "せせらぎの水が持つ7つの特性を、三島の行動原理として言語化した指針。",
+    )
+
+    # --- ビジョン構造 ---
+    st.markdown("### ビジョンの全体構造")
+    st.markdown(
+        """
+        <div style="max-width:640px; margin:0 auto 1.5rem auto;">
+            <!-- 最上位 -->
+            <div style="background:linear-gradient(135deg, #0d3b66, #1a6b8a); color:#fff;
+                        border-radius:14px; padding:1.3rem; text-align:center; font-weight:900;
+                        font-size:1.15rem; letter-spacing:0.06em;">
+                セセラギズム（哲学・世界観）
+            </div>
+            <div style="text-align:center; color:#1a6b8a; font-size:0.8rem; margin:0.4rem 0;">
+                <div style="border-left:2px solid #80deea; height:20px; margin:0 auto; width:0;"></div>│
+            </div>
+            <!-- 地域像 -->
+            <div style="background:linear-gradient(135deg, #1a6b8a, #48b4a0); color:#fff;
+                        border-radius:14px; padding:1rem; text-align:center; font-weight:700;
+                        font-size:0.95rem;">
+                地域像：三島は10年後にどんなまちか（ビジョンステートメント）
+            </div>
+            <div style="text-align:center; color:#1a6b8a; font-size:0.8rem; margin:0.4rem 0;">
+                <div style="border-left:2px solid #80deea; height:20px; margin:0 auto; width:0;"></div>│
+            </div>
+            <!-- 7つの行動原則 -->
+            <div style="background:linear-gradient(135deg, #e0f7fa, #b2ebf2); border:2px solid #80deea;
+                        border-radius:14px; padding:1.1rem; text-align:center; font-weight:700;
+                        color:#0a2540; font-size:1rem;">
+                7つの行動原則
+            </div>
+            <div style="text-align:center; color:#1a6b8a; font-size:0.8rem; margin:0.4rem 0;">
+                <div style="border-left:2px solid #80deea; height:20px; margin:0 auto; width:0;"></div>│
+            </div>
+            <!-- 重点テーマ -->
+            <div style="background:#ffffff; border:2px solid #26c6da; border-radius:14px;
+                        padding:1rem; text-align:center; font-weight:700; color:#0d3b66; font-size:0.95rem;">
+                重点テーマ①〜④<br/>
+                <span style="font-size:0.78rem; font-weight:400; color:#607d8b;">
+                    各テーマが「セセラギズム」と接続</span>
+            </div>
+            <div style="text-align:center; color:#1a6b8a; font-size:0.8rem; margin:0.4rem 0;">
+                <div style="border-left:2px solid #80deea; height:20px; margin:0 auto; width:0;"></div>│
+            </div>
+            <!-- アクションプラン -->
+            <div style="background:#ffffff; border:1px solid #b2ebf2; border-radius:14px;
+                        padding:1rem; text-align:center; font-weight:600; color:#0d3b66; font-size:0.9rem;">
+                アクションプラン（短期・中期・長期）
+            </div>
+            <div style="text-align:center; color:#1a6b8a; font-size:0.8rem; margin:0.4rem 0;">
+                <div style="border-left:2px solid #80deea; height:20px; margin:0 auto; width:0;"></div>│
+            </div>
+            <!-- KPI -->
+            <div style="background:#ffffff; border:1px solid #b2ebf2; border-radius:14px;
+                        padding:1rem; text-align:center; font-weight:600; color:#0d3b66; font-size:0.9rem;">
+                KPI・モニタリング
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        """
+        <div class="section-divider-wave">
+            <svg viewBox="0 0 1200 32" preserveAspectRatio="none">
+                <path d="M0,16 C150,28 350,4 500,16 C650,28 850,4 1000,16 C1100,24 1150,8 1200,16"
+                      fill="none" stroke="#80deea" stroke-width="2"/>
+                <path d="M0,20 C200,8 400,30 600,18 C800,6 1000,28 1200,16"
+                      fill="none" stroke="#b2ebf2" stroke-width="1.5"/>
+            </svg>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # --- 7つの行動原則 ---
+    st.markdown("### せせらぎの特性 × 行動原則")
+    st.markdown("水の流れが教えてくれる、7つの行動のかたち。")
+
+    principles = [
+        (
+            "💧", "湧き出すことから", "主体性",
+            "止まらない",
+            "誰かを待たず、自ら動き出す",
+            "自分から動けているだろうか",
+        ),
+        (
+            "🤝", "受け入れることから", "開放性",
+            "周りを潤す",
+            "外から来る人・コト・アイデアを拒まない。潤し、潤される関係をつくる",
+            "互いに潤し合えているだろうか",
+        ),
+        (
+            "🌱", "小さく始めることから", "実行力",
+            "小さいが力がある",
+            "完璧を待たず、まず一筋の流れを生む",
+            "まず一歩を踏み出せているだろうか",
+        ),
+        (
+            "🔄", "道を見つけることから", "柔軟性",
+            "どこにでも道を見つける",
+            "障害があっても止まらない。しなやかに迂回する",
+            "別の水路に目を向けているだろうか",
+        ),
+        (
+            "🌊", "合流することから", "連携",
+            "集まると大きな流れになる",
+            "異なる業種・世代・立場がつながる場をつくる",
+            "まだ出会えていない流れがないだろうか",
+        ),
+        (
+            "🌿", "浸透を信じることから", "持続性",
+            "浸透する",
+            "すぐに成果が見えなくても、地道に染み込ませる",
+            "地域に染み込んでいるだろうか",
+        ),
+        (
+            "🎵", "響かせることから", "発信",
+            "音を生む",
+            "楽しみながら行動し、外に向けて鳴らす",
+            "外に届いているだろうか",
+        ),
+    ]
+
+    for i, (icon, title, keyword, water, meaning, criteria) in enumerate(principles):
+        num = i + 1
+        # 奇数・偶数で色を変える
+        bg = "linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%)" if num % 2 == 1 else "#ffffff"
+        st.markdown(
+            f"""
+            <div style="display:grid; grid-template-columns:80px 1fr; gap:1rem;
+                        background:{bg}; border-radius:14px; padding:1.4rem 1.5rem;
+                        margin-bottom:0.8rem; box-shadow:0 2px 10px rgba(10,37,64,0.06);
+                        border-left:5px solid #1a6b8a;">
+                <div style="text-align:center;">
+                    <div style="font-size:2rem; margin-bottom:0.3rem;">{icon}</div>
+                    <div style="display:inline-block; background:linear-gradient(135deg, #0d3b66, #1a6b8a);
+                                color:#fff; font-size:0.75rem; font-weight:700;
+                                padding:0.2rem 0.7rem; border-radius:12px;">{keyword}</div>
+                </div>
+                <div>
+                    <div style="font-size:1.15rem; font-weight:900; color:#0a2540; margin-bottom:0.2rem;">
+                        {num}. {title}
+                    </div>
+                    <div style="font-size:0.78rem; color:#1a6b8a; font-weight:600; margin-bottom:0.4rem;">
+                        せせらぎの特性：{water}
+                    </div>
+                    <div style="font-size:0.88rem; color:#37474f; line-height:1.65; margin-bottom:0.5rem;">
+                        {meaning}
+                    </div>
+                    <div style="background:rgba(26,107,138,0.06); border-radius:8px; padding:0.5rem 0.8rem;
+                                font-size:0.82rem; color:#0d3b66; font-style:italic;">
+                        {criteria}
+                    </div>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    st.markdown(
+        """
+        <div class="section-divider-wave">
+            <svg viewBox="0 0 1200 32" preserveAspectRatio="none">
+                <path d="M0,16 C150,28 350,4 500,16 C650,28 850,4 1000,16 C1100,24 1150,8 1200,16"
+                      fill="none" stroke="#80deea" stroke-width="2"/>
+                <path d="M0,20 C200,8 400,30 600,18 C800,6 1000,28 1200,16"
+                      fill="none" stroke="#b2ebf2" stroke-width="1.5"/>
+            </svg>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # --- せせらぎの特性との対応表 ---
+    st.markdown("### せせらぎの特性との対応")
+
+    mapping_html = ""
+    for i, (icon, title, keyword, water, meaning, criteria) in enumerate(principles):
+        mapping_html += f"""
+            <div style="display:grid; grid-template-columns:1fr 40px 1fr; gap:0.5rem; align-items:center;
+                        margin-bottom:0.4rem;">
+                <div style="background:#f5fbfe; border-radius:8px; padding:0.6rem 1rem;
+                            font-size:0.88rem; color:#0d3b66; font-weight:600; text-align:right;">
+                    {water}
+                </div>
+                <div style="text-align:center; color:#1a6b8a; font-size:1rem;">→</div>
+                <div style="background:linear-gradient(135deg, #e0f7fa, #ffffff); border-radius:8px;
+                            padding:0.6rem 1rem; font-size:0.88rem; color:#0a2540; font-weight:700;">
+                    {title}
+                </div>
+            </div>"""
+    st.markdown(mapping_html, unsafe_allow_html=True)
+
+    st.markdown(
+        """
+        <div class="section-divider-wave">
+            <svg viewBox="0 0 1200 32" preserveAspectRatio="none">
+                <path d="M0,16 C150,28 350,4 500,16 C650,28 850,4 1000,16 C1100,24 1150,8 1200,16"
+                      fill="none" stroke="#80deea" stroke-width="2"/>
+                <path d="M0,20 C200,8 400,30 600,18 C800,6 1000,28 1200,16"
+                      fill="none" stroke="#b2ebf2" stroke-width="1.5"/>
+            </svg>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # --- まとめ ---
+    st.markdown(
+        """
+        <div class="narrative-box">
+            <p>
+                7つの行動原則は、すべて <strong>「〜ことから」</strong> で結ばれている。<br/>
+                押しつけではなく、一歩踏み出す姿勢の提案。<br/><br/>
+                せせらぎの水が自然と湧き出し、流れ、合流し、浸透し、音を奏でるように、<br/>
+                三島の人と活動もまた、この7つの原則に沿って動き出す。<br/><br/>
+                迷ったときは、それぞれの <strong>判断基準</strong> に立ち返る。<br/>
+                「自分から動けているだろうか」「外に届いているだろうか」<br/>
+                その問いかけが、セセラギズムの羅針盤になる。
+            </p>
+            <span class="narrative-emphasis">
+                水のように、自然体で、しなやかに。
+            </span>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+# ============================================================
 # メイン
 # ============================================================
 def main() -> None:
@@ -1884,6 +2125,7 @@ def main() -> None:
             st.Page(page_workshop_analysis, title="ワークショップ分析", icon="🔍"),
             st.Page(page_survey_analysis, title="アンケート分析", icon="📋"),
             st.Page(page_statistics, title="三島市統計データ", icon="📈"),
+            st.Page(page_action_principles, title="行動原則", icon="💧"),
         ]
     )
     pg.run()
