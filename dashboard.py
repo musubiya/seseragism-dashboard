@@ -554,21 +554,21 @@ def page_vision_evolution() -> None:
     milestones = [
         {
             "year": "50周年",
-            "theme": "せせらぎ",
+            "theme": "街中がせせらぎ",
             "stage": "再生・復活",
             "desc": "市民活動での水の復活。<br/>水辺せせらぎの街としての刷新。",
             "active": False,
         },
         {
             "year": "60周年",
-            "theme": "四ッ辻",
+            "theme": "新 四ツ辻文化の街",
             "stage": "交差・集積",
             "desc": "三島の歴史を踏襲して道が交錯し、<br/>人モノが交錯する街。",
             "active": False,
         },
         {
             "year": "70周年",
-            "theme": "つなぐ",
+            "theme": "つなぐ三島",
             "stage": "接続・継承",
             "desc": "過去の活動から未来へつなぎ、<br/>新しい未来へのメッセージ。",
             "active": False,
@@ -618,21 +618,21 @@ def page_vision_evolution() -> None:
     story_steps = [
         {
             "period": "50周年",
-            "name": "せせらぎ",
+            "name": "街中がせせらぎ",
             "stage": "再生・復活",
             "arrow": "水の復活",
             "detail": "三島の原点である湧水と水辺を、市民活動の力で蘇らせた。「せせらぎの街・三島」というアイデンティティが確立された時代。",
         },
         {
             "period": "60周年",
-            "name": "四ッ辻",
+            "name": "新 四ツ辻文化の街",
             "stage": "交差・集積",
             "arrow": "人とモノの交差",
             "detail": "宿場町としての歴史を踏まえ、道が交わり人とモノが集まる結節点としての三島を再定義。内外の交流が活性化。",
         },
         {
             "period": "70周年",
-            "name": "つなぐ",
+            "name": "つなぐ三島",
             "stage": "接続・継承",
             "arrow": "過去と未来の接続",
             "detail": "これまでの活動を未来へつなぎ、次の世代に受け渡すメッセージを発信。継承と連帯のステージ。",
@@ -695,7 +695,7 @@ def page_vision_evolution() -> None:
         """
         <div class="narrative-box">
             <p>
-                50周年で「<strong>せせらぎ</strong>」として水を復活させた三島。<br/>
+                50周年で「<strong>街中がせせらぎ</strong>」として水を復活させた三島。<br/>
                 80周年では、その「せせらぎ」に「<strong>イズム（ism）</strong>」を加え、<br/>
                 思想・運動として外の世界に発信するステージへ進化する。
             </p>
@@ -743,80 +743,6 @@ def page_seseragism() -> None:
         """,
         unsafe_allow_html=True,
     )
-
-    st.markdown(
-        """
-        <div class="section-divider-wave">
-            <svg viewBox="0 0 1200 32" preserveAspectRatio="none">
-                <path d="M0,16 C150,28 350,4 500,16 C650,28 850,4 1000,16 C1100,24 1150,8 1200,16"
-                      fill="none" stroke="#80deea" stroke-width="2"/>
-                <path d="M0,20 C200,8 400,30 600,18 C800,6 1000,28 1200,16"
-                      fill="none" stroke="#b2ebf2" stroke-width="1.5"/>
-            </svg>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # --- せせらぎの本質的特徴 ---
-    st.markdown("### せせらぎの本質的特徴")
-    st.markdown("水の流れが持つ6つの特性。そのすべてが三島の行動原理と重なる。")
-
-    features = [
-        ("🌊", "止まらない", "常に流れ続ける。停滞しない。変化しながらも途切れない。"),
-        ("💎", "小さいが力がある", "岩をも削る。小さな流れが持つ驚くべきパワー。"),
-        ("🏞", "集まると大きな流れになる", "小川が大河に。個の力が集まり、うねりを生む。"),
-        ("🔄", "どこにでも道を見つける", "障害物を避け、時には超えて。柔軟に前へ進む。"),
-        ("🌿", "周りを潤す", "流れるだけで周囲に恵みを与える。存在自体が価値。"),
-        ("🎵", "音を生む", "流れること自体がリズムになる。行動がビートを刻む。"),
-    ]
-
-    features_html = '<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin-bottom:1rem;">'
-    for icon, title, text in features:
-        features_html += f"""
-            <div class="concept-card">
-                <div class="concept-icon">{icon}</div>
-                <div class="concept-title">{title}</div>
-                <div class="concept-text">{text}</div>
-            </div>"""
-    features_html += "</div>"
-    st.markdown(features_html, unsafe_allow_html=True)
-
-    st.markdown(
-        """
-        <div class="section-divider-wave">
-            <svg viewBox="0 0 1200 32" preserveAspectRatio="none">
-                <path d="M0,16 C150,28 350,4 500,16 C650,28 850,4 1000,16 C1100,24 1150,8 1200,16"
-                      fill="none" stroke="#80deea" stroke-width="2"/>
-                <path d="M0,20 C200,8 400,30 600,18 C800,6 1000,28 1200,16"
-                      fill="none" stroke="#b2ebf2" stroke-width="1.5"/>
-            </svg>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # --- 三島の行動パターン ---
-    st.markdown("### 三島の行動パターン（ワークショップから抽出）")
-    st.markdown("ワークショップ参加者から浮かび上がった、三島人のDNA。")
-
-    behaviors = [
-        ("🤝", "よそ者を受け入れる", "宿場町のDNA。東海道の要衝として、外からの人を歓迎してきた歴史。"),
-        ("✊", "自分からやる", "「誰かがやるのではなく自分がやる」精神。主体的に動く文化。"),
-        ("🌱", "小さく始めて、じわじわ広げる", "大きな計画より、まず行動。小さな一歩が大きなうねりに。"),
-        ("🔗", "つながりを大事にする", "人と人、過去と未来、地域と地域。つなぐことが三島の力。"),
-        ("😊", "楽しんでやる", "義務ではなく楽しみとして。遊び心が持続可能な活動の源泉。"),
-    ]
-
-    behaviors_html = ""
-    for icon, title, text in behaviors:
-        behaviors_html += f"""
-            <div class="concept-card">
-                <div class="concept-icon" style="display:inline; margin-right:0.5rem;">{icon}</div>
-                <span class="concept-title">{title}</span>
-                <div class="concept-text">{text}</div>
-            </div>"""
-    st.markdown(behaviors_html, unsafe_allow_html=True)
 
     st.markdown(
         """
@@ -1149,7 +1075,7 @@ def page_workshop_analysis() -> None:
         """
         <div class="narrative-box">
             <p>
-                8チームすべてに共通するのは <strong>「オープン」「受け入れる」「水」</strong> というキーワード。<br/>
+                8チームすべてに共通するのは <strong>「オープン」「ウェルカム」「受け入れる」</strong> というキーワード。<br/>
                 三島の本質は「開かれた水の街」であり、それは宿場町としてよそ者を迎え入れてきた
                 歴史的DNAに根差している。<br/>
                 この行動原理を <strong>セセラギズム</strong> として言語化し、次の10年の指針とする。
@@ -1587,89 +1513,85 @@ def page_statistics() -> None:
         "人口・観光・産業から見る三島の現在地。データが示す課題と可能性。",
     )
 
-    # --- トップメトリクス ---
-    top_metrics = [
-        ("💧", "湧水スポット", "約40箇所", "市内各所に湧水が点在"),
-        ("⛩", "三嶋大社", "創建 不詳", "伊豆国一宮・源頼朝ゆかりの社"),
-        ("🏔", "標高", "約50m", "富士山の伏流水が湧き出る地形"),
-        ("🚄", "東京から", "約50分", "新幹線こだま号で好アクセス"),
-    ]
-    top_html = '<div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:1rem; margin-bottom:1rem;">'
-    for icon, label, value, desc in top_metrics:
-        top_html += f"""
-            <div class="metric-card">
-                <div class="metric-label">{icon} {label}</div>
-                <div class="metric-value">{value}</div>
-                <div class="metric-desc">{desc}</div>
-            </div>"""
-    top_html += "</div>"
-    st.markdown(top_html, unsafe_allow_html=True)
-
-    st.markdown(
-        """
-        <div class="section-divider-wave">
-            <svg viewBox="0 0 1200 32" preserveAspectRatio="none">
-                <path d="M0,16 C150,28 350,4 500,16 C650,28 850,4 1000,16 C1100,24 1150,8 1200,16"
-                      fill="none" stroke="#80deea" stroke-width="2"/>
-                <path d="M0,20 C200,8 400,30 600,18 C800,6 1000,28 1200,16"
-                      fill="none" stroke="#b2ebf2" stroke-width="1.5"/>
-            </svg>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
     # --- 人口推移 ---
-    st.markdown("### 人口推移（2000年 - 2025年）")
+    st.markdown("### 人口推移と将来推計")
+    st.markdown("住民基本台帳ベース（日本人住民）。2026年以降は近年の減少率をもとにした推計。")
 
-    years_pop = list(range(2000, 2026))
-    np.random.seed(42)
-    population_base = np.array(
-        [113200, 113400, 113300, 113100, 112800,
-         112400, 112000, 111700, 111500, 111200,
-         110800, 110500, 110200, 109800, 109500,
-         109200, 108800, 108500, 108200, 107900,
-         107600, 107400, 107200, 107100, 107000, 106900]
-    )
-    # 微小なランダム変動を追加
-    population = population_base + np.random.randint(-100, 100, size=len(years_pop))
+    # 実績データ（2000-2025）出典: jp.gdfreak.com / 住民基本台帳
+    actual_years = list(range(2000, 2026))
+    actual_pop = [
+        110_300, 110_700, 110_500, 111_000, 111_300,  # 2000-2004
+        111_600, 112_100, 112_200, 111_900, 111_300,  # 2005-2009
+        110_800, 110_600, 110_400, 110_200, 109_900,  # 2010-2014
+        109_500, 109_000, 108_400, 108_000, 107_400,  # 2015-2019
+        106_800, 106_200, 105_500, 104_800, 104_100, 103_359,  # 2020-2025
+    ]
 
-    df_pop = pd.DataFrame({"年": years_pop, "人口": population})
+    # 将来推計（2026-2035）近年の減少率 約-1.0〜-1.3% をベースに推計
+    projected_years = list(range(2026, 2036))
+    projected_pop = []
+    last = 103_359
+    for rate in [-1.2, -1.2, -1.1, -1.1, -1.0, -1.0, -0.9, -0.9, -0.8, -0.8]:
+        last = round(last * (1 + rate / 100))
+        projected_pop.append(last)
 
     fig_pop = go.Figure()
+
+    # 実績（実線）
     fig_pop.add_trace(
         go.Scatter(
-            x=df_pop["年"],
-            y=df_pop["人口"],
+            x=actual_years, y=actual_pop,
+            name="実績",
             mode="lines+markers",
             line=dict(color="#1a6b8a", width=2.5),
-            marker=dict(size=5, color="#0d3b66"),
-            fill="tozeroy",
-            fillcolor="rgba(26,107,138,0.08)",
-            hovertemplate="<b>%{x}年</b><br>人口: %{y:,.0f}人<extra></extra>",
+            marker=dict(size=4, color="#0d3b66"),
+            hovertemplate="<b>%{x}年</b><br>人口: %{y:,.0f}人（実績）<extra></extra>",
         )
     )
+    # 推計（破線）— 実績の最終年を起点にして接続
+    fig_pop.add_trace(
+        go.Scatter(
+            x=[actual_years[-1]] + projected_years,
+            y=[actual_pop[-1]] + projected_pop,
+            name="推計",
+            mode="lines+markers",
+            line=dict(color="#e57373", width=2.5, dash="dash"),
+            marker=dict(size=4, color="#e57373", symbol="diamond"),
+            hovertemplate="<b>%{x}年</b><br>人口: %{y:,.0f}人（推計）<extra></extra>",
+        )
+    )
+
+    # 80周年（2025）ライン
+    fig_pop.add_vline(
+        x=2025, line=dict(color="#26c6da", width=1.5, dash="dot"),
+        annotation_text="80周年", annotation_position="top",
+        annotation_font=dict(size=11, color="#0d3b66"),
+    )
+
     fig_pop.update_layout(
-        xaxis=dict(title="年", showgrid=False),
-        yaxis=dict(title="人口（人）", tickformat=",", gridcolor="#e0f2f1"),
-        height=380,
+        xaxis=dict(title="年", showgrid=False, dtick=5),
+        yaxis=dict(title="人口（人）", tickformat=",", gridcolor="#e0f2f1",
+                   range=[90_000, 115_000]),
+        height=420,
         margin=dict(l=60, r=30, t=30, b=50),
         plot_bgcolor="#fafffe",
         paper_bgcolor="#ffffff",
         font=dict(family="Noto Sans JP"),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
 
     st.plotly_chart(fig_pop, use_container_width=True)
     st.markdown(
-        """
+        f"""
         <div class="metric-card">
             <div class="metric-label">人口動態サマリ</div>
-            <div class="metric-value" style="font-size:1.3rem;">約6,300人減</div>
+            <div class="metric-value" style="font-size:1.3rem;">
+                2025年 103,359人 → 2035年 約{projected_pop[-1]:,}人（推計）
+            </div>
             <div class="metric-desc">
-                2000年の約113,200人から2025年の約107,000人へ。
-                25年間で約5.6%の減少。全国平均と同様の少子高齢化トレンドだが、
-                減少幅は比較的緩やか。
-                移住促進・関係人口拡大が今後のカギとなる。
+                ピーク（2007年 約112,200人）から2025年で約8,800人減（-7.9%）。
+                近年は年-1.0〜-1.3%で加速。推計では2035年に10万人を割り込む可能性がある。
+                移住促進・関係人口の拡大が今後のカギとなる。
             </div>
         </div>
         """,
@@ -1955,6 +1877,44 @@ def page_action_principles() -> None:
         unsafe_allow_html=True,
     )
 
+    # --- せせらぎの本質的特性 ---
+    st.markdown("### せせらぎの本質的特性")
+    st.markdown("水の流れが持つ6つの特性。そのすべてが三島の行動原理と重なる。")
+
+    features = [
+        ("🌊", "止まらない", "常に流れ続ける。停滞しない。変化しながらも途切れない。"),
+        ("💎", "小さいが力がある", "岩をも削る。小さな流れが持つ驚くべきパワー。"),
+        ("🏞", "集まると大きな流れになる", "小川が大河に。個の力が集まり、うねりを生む。"),
+        ("🔄", "どこにでも道を見つける", "障害物を避け、時には超えて。柔軟に前へ進む。"),
+        ("🌿", "周りを潤す", "流れるだけで周囲に恵みを与える。存在自体が価値。"),
+        ("🎵", "音を生む", "流れること自体がリズムになる。行動がビートを刻む。"),
+    ]
+
+    features_html = '<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin-bottom:1rem;">'
+    for icon, title, text in features:
+        features_html += f"""
+            <div class="concept-card">
+                <div class="concept-icon">{icon}</div>
+                <div class="concept-title">{title}</div>
+                <div class="concept-text">{text}</div>
+            </div>"""
+    features_html += "</div>"
+    st.markdown(features_html, unsafe_allow_html=True)
+
+    st.markdown(
+        """
+        <div class="section-divider-wave">
+            <svg viewBox="0 0 1200 32" preserveAspectRatio="none">
+                <path d="M0,16 C150,28 350,4 500,16 C650,28 850,4 1000,16 C1100,24 1150,8 1200,16"
+                      fill="none" stroke="#80deea" stroke-width="2"/>
+                <path d="M0,20 C200,8 400,30 600,18 C800,6 1000,28 1200,16"
+                      fill="none" stroke="#b2ebf2" stroke-width="1.5"/>
+            </svg>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
     # --- 7つの行動原則 ---
     st.markdown("### せせらぎの特性 × 行動原則")
     st.markdown("水の流れが教えてくれる、7つの行動のかたち。")
@@ -2004,12 +1964,11 @@ def page_action_principles() -> None:
         ),
     ]
 
+    principles_html = ""
     for i, (icon, title, keyword, water, meaning, criteria) in enumerate(principles):
         num = i + 1
-        # 奇数・偶数で色を変える
         bg = "linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%)" if num % 2 == 1 else "#ffffff"
-        st.markdown(
-            f"""
+        principles_html += f"""
             <div style="display:grid; grid-template-columns:80px 1fr; gap:1rem;
                         background:{bg}; border-radius:14px; padding:1.4rem 1.5rem;
                         margin-bottom:0.8rem; box-shadow:0 2px 10px rgba(10,37,64,0.06);
@@ -2035,44 +1994,8 @@ def page_action_principles() -> None:
                         {criteria}
                     </div>
                 </div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-    st.markdown(
-        """
-        <div class="section-divider-wave">
-            <svg viewBox="0 0 1200 32" preserveAspectRatio="none">
-                <path d="M0,16 C150,28 350,4 500,16 C650,28 850,4 1000,16 C1100,24 1150,8 1200,16"
-                      fill="none" stroke="#80deea" stroke-width="2"/>
-                <path d="M0,20 C200,8 400,30 600,18 C800,6 1000,28 1200,16"
-                      fill="none" stroke="#b2ebf2" stroke-width="1.5"/>
-            </svg>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    # --- せせらぎの特性との対応表 ---
-    st.markdown("### せせらぎの特性との対応")
-
-    mapping_html = ""
-    for i, (icon, title, keyword, water, meaning, criteria) in enumerate(principles):
-        mapping_html += f"""
-            <div style="display:grid; grid-template-columns:1fr 40px 1fr; gap:0.5rem; align-items:center;
-                        margin-bottom:0.4rem;">
-                <div style="background:#f5fbfe; border-radius:8px; padding:0.6rem 1rem;
-                            font-size:0.88rem; color:#0d3b66; font-weight:600; text-align:right;">
-                    {water}
-                </div>
-                <div style="text-align:center; color:#1a6b8a; font-size:1rem;">→</div>
-                <div style="background:linear-gradient(135deg, #e0f7fa, #ffffff); border-radius:8px;
-                            padding:0.6rem 1rem; font-size:0.88rem; color:#0a2540; font-weight:700;">
-                    {title}
-                </div>
             </div>"""
-    st.markdown(mapping_html, unsafe_allow_html=True)
+    st.markdown(principles_html, unsafe_allow_html=True)
 
     st.markdown(
         """
@@ -2122,10 +2045,10 @@ def main() -> None:
         [
             st.Page(page_vision_evolution, title="ビジョンの変遷", icon="📊"),
             st.Page(page_seseragism, title="セセラギズム", icon="🌊"),
+            st.Page(page_action_principles, title="行動原則", icon="💧"),
             st.Page(page_workshop_analysis, title="ワークショップ分析", icon="🔍"),
             st.Page(page_survey_analysis, title="アンケート分析", icon="📋"),
             st.Page(page_statistics, title="三島市統計データ", icon="📈"),
-            st.Page(page_action_principles, title="行動原則", icon="💧"),
         ]
     )
     pg.run()
